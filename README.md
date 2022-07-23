@@ -1,5 +1,9 @@
 # pileUpStudies
 
+These files currently are based on https://github.com/singh-ramanpreet/PUJetId_training_plotting
+- Currently updated for JMENano files
+- To do: change to C++ or uproot for speed
+
 To run interactively on lxplus: 
 
 ```
