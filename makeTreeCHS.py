@@ -72,7 +72,7 @@ JetSel_partflav = NTrees*[0]
 
 for i, outTree in enumerate(outTrees):
 
-    PV_npvsGood[i] = book_float_branch(outTree, "nvtx"          )
+    PV_npvsGood[i] = book_int_branch(outTree, "nvtx"          )
     JetSel_puId_dR2Mean [i] = book_float_branch(outTree, "dR2Mean"          )
     JetSel_puId_jetR [i] = book_float_branch(outTree, "jetR"          )
     JetSel_puId_jetRchg [i] = book_float_branch(outTree, "jetRchg"          )
