@@ -1,0 +1,20 @@
+executable            = run_train_bdt.sh
+output                = output/std_train_bdt_$(ClusterId)_$(ProcId)
+error                 = output/std_train_bdt_$(ClusterId)_$(ProcId)
+log                   = output/log_train_bdt_$(ClusterId)_$(ProcId)
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+
+transfer_input_files  = train_bdt.py
+transfer_output_files = my_job.output.tar.gz,
+
+output_destination = root://eosuser.cern.ch//eos/user/j/jiyoo/condor1/$(ClusterId)/MY.XRDCP_CREATE_DIR = True
+
+arguments            = 94X 10000 chs /afs/cern.ch/user/j/jiyoo/pileup/$(eta_bin)
+
++JobFlavour           = "longlunch"
+
+eta_bin               = Eta2p5To2p75
+queue
+
