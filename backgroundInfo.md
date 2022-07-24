@@ -5,6 +5,7 @@
 
 ## Pileup Studies
 - 2022: [PU JetID for PUPPI jets](https://twiki.cern.ch/twiki/bin/viewauth/CMS/PileupJetID)
+- - 2022: [JMAR Overview](https://indico.cern.ch/event/1101433/contributions/4778600/attachments/2425363/4152220/JMAR_overview.pdf)
 - 2019: [PU ID training for Ultra Legacy 2017 Dataset](https://indico.cern.ch/event/916566/contributions/3861311/attachments/2045087/3426056/2020May26_PU_ID.pdf)
 
 
