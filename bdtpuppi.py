@@ -74,7 +74,7 @@ for eta_bin in eta_bins:
 
     # --------------SET 1 For ETA < 3----------------------
     var_set1 = [
-        ("nvtx"      , "I"),
+        ("nvtx"      , "F"),
         ("beta"      , "F"),
         ("dR2Mean"   , "F"),
         ("frac01"    , "F"),
@@ -93,7 +93,7 @@ for eta_bin in eta_bins:
     
     # --------------SET 2 For ETA > 3----------------------
     var_set2 = [
-        ("nvtx"      , "I"),
+        ("nvtx"      , "F"),
         #("beta"      , "F"),
         ("dR2Mean"   , "F"),
         ("frac01"    , "F"),
