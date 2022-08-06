@@ -72,7 +72,7 @@ JetSel_partflav = NTrees*[0]
 
 for i, outTree in enumerate(outTrees):
 
-    PV_npvsGood[i] = book_int_branch(outTree, "nvtx"          )
+    PV_npvsGood[i] = book_float_branch(outTree, "nvtx"          )
     JetSel_puId_dR2Mean [i] = book_float_branch(outTree, "dR2Mean"          )
     JetSel_puId_jetR [i] = book_float_branch(outTree, "jetR"          )
     JetSel_puId_jetRchg [i] = book_float_branch(outTree, "jetRchg"          )
@@ -111,6 +111,7 @@ for ievent, event in enumerate(tChain):
         #print('flavor', flavor_)
 
         if event.JetSel_pt[i] > 100: continue
+        if event.JetSel_pt[i] < 100: continue
         
         isPrompt = False
         isPileup = False
@@ -119,7 +120,8 @@ for ievent, event in enumerate(tChain):
             isPrompt = True
             #print('isPrompt', isPrompt)
         
-        if (dRMatch_ >= 0.4 and abs(flavor_) == 0 ):
+        #if (dRMatch_ >= 0.4 and abs(flavor_) == 0 ):
+        if (dRMatch_ >= 0.4):
             isPileup = True
             #print('isPileup', isPileup)
     
@@ -143,7 +145,7 @@ for ievent, event in enumerate(tChain):
 
         outTree_toFill = outTrees[key]
 
-        PV_npvsGood  [key][0] = event.PV_npvsGood
+        PV_npvsGood  [key][0] = float(event.PV_npvsGood)
         #PV_npvsGood  [key][0] = event.PV_npvsGood[i]
         JetSel_puId_dR2Mean  [key][0] = event.JetSel_puId_dR2Mean [i]
         JetSel_puId_jetR  [key][0] = event.JetSel_puId_jetR [i]
